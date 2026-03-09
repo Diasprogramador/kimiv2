@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento - LilaMarket</title>
+    <!-- Importação das fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Arquivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- CABEÇALHO PRINCIPAL DO SITE -->
+    <!-- ============================================ -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo do site com link para a home -->
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Lila<span>Market</span></span>
+                </a>
+
+                <!-- Menu de navegação para desktop -->
+                <nav class="nav-desktop">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <!-- Aba de Cursos - destaque no menu -->
+                    <a href="cursos.html" class="nav-link">Cursos</a>
+                    <a href="../index.html#produtos" class="nav-link">Produtos</a>
+                    <a href="rastreamento.html" class="nav-link active">Meus Pedidos</a>
+                </nav>
+
+                <!-- Ações do cabeçalho: login e carrinho -->
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn user-btn" title="Login">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" title="Carrinho">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- MENU MOBILE (SLIDE DA DIREITA) -->
+    <!-- ============================================ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <span class="logo-text">Lila<span>Market</span></span>
+            </a>
+            <button class="menu-close" id="menuClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <!-- Aba de Cursos no menu mobile -->
+            <a href="cursos.html" class="mobile-nav-link">Cursos</a>
+            <a href="../index.html#produtos" class="mobile-nav-link">Produtos</a>
+            <a href="rastreamento.html" class="mobile-nav-link active">Meus Pedidos</a>
+            <a href="login.html" class="mobile-nav-link">Entrar / Cadastrar</a>
+        </nav>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- CONTEÚDO PRINCIPAL - RASTREAMENTO -->
+    <!-- ============================================ -->
+    <main class="rastreamento-page">
+        <div class="rastreamento-container">
+            <div class="rastreamento-header">
+                <h1>Rastreamento de Pedido</h1>
+            </div>
+
+            <!-- Card do Pedido com Timeline -->
+            <div class="pedido-card">
+                <div class="pedido-info">
+                    <div class="pedido-numero">
+                        <h4>Número do Pedido</h4>
+                        <p>#LM-2025-001234</p>
+                    </div>
+                    <span class="pedido-status">Em Rota</span>
+                </div>
+
+                <!-- Timeline de rastreamento -->
+                <div class="tracking-timeline">
+                    <div class="tracking-item completed">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Pedido Confirmado</h4>
+                            <p>03 de Março, 2025 às 10:30</p>
+                        </div>
+                    </div>
+                    <div class="tracking-item completed">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Pagamento Aprovado</h4>
+                            <p>03 de Março, 2025 às 10:35</p>
+                        </div>
+                    </div>
+                    <div class="tracking-item completed">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Em Preparação</h4>
+                            <p>03 de Março, 2025 às 14:00</p>
+                        </div>
+                    </div>
+                    <div class="tracking-item completed">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Saiu do Centro de Distribuição</h4>
+                            <p>04 de Março, 2025 às 08:15</p>
+                        </div>
+                    </div>
+                    <div class="tracking-item active">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Em Rota de Entrega</h4>
+                            <p>Previsão: 04 de Março, 2025 até 18:00</p>
+                        </div>
+                    </div>
+                    <div class="tracking-item">
+                        <div class="tracking-dot"></div>
+                        <div class="tracking-content">
+                            <h4>Entregue</h4>
+                            <p>Aguardando confirmação</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ações do pedido -->
+                <div class="tracking-actions">
+                    <button class="btn btn-outline" onclick="showToast('Cancelamento solicitado')">Cancelar Pedido</button>
+                    <button class="btn btn-primary" onclick="showToast('Problema reportado')">Relatar Problema</button>
+                </div>
+            </div>
+
+            <!-- Dados do Pedido -->
+            <div class="pedido-card">
+                <h3 style="margin-bottom: 1.5rem; color: var(--lila-5);">Dados do Pedido</h3>
+
+                <div style="display: grid; gap: 1.5rem;">
+                    <!-- Produtos do pedido -->
+                    <div>
+                        <h4 style="font-size: 0.9rem; color: var(--gray-500); margin-bottom: 0.5rem;">Produtos</h4>
+                        <div id="pedidoProdutos">
+                            <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--gray-200);">
+                                <span>Curso Completo de React.js</span>
+                                <span style="font-weight: 600;">R$ 299,00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 0.75rem 0;">
+                                <span>Node.js do Zero ao Avançado</span>
+                                <span style="font-weight: 600;">R$ 349,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endereço e Pagamento -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <h4 style="font-size: 0.9rem; color: var(--gray-500); margin-bottom: 0.5rem;">Endereço de Entrega</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-700);">
+                                Rua das Flores, 123<br>
+                                Jardim Primavera<br>
+                                São Paulo, SP - 01234-567
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.9rem; color: var(--gray-500); margin-bottom: 0.5rem;">Forma de Pagamento</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-700);">
+                                Cartão de Crédito<br>
+                                **** **** **** 1234<br>
+                                3x de R$ 216,00
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Total do pedido -->
+                    <div style="display: flex; justify-content: space-between; padding-top: 1rem; border-top: 2px solid var(--lila-4);">
+                        <span style="font-weight: 700; color: var(--lila-5);">Total</span>
+                        <span style="font-size: 1.25rem; font-weight: 700; color: var(--lila-4);">R$ 648,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- RODAPÉ DO SITE -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Lila<span>Market</span></span>
+                    </a>
+                    <p>Seu marketplace completo para aprendizado e compras online.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 1-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 1-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="../index.html#produtos">Produtos</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="rastreamento.html">Rastrear Pedido</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@lilamarket.com">contato@lilamarket.com</a></li>
+                        <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LilaMarket. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <span>Formas de pagamento:</span>
+                    <img src="https://img.shields.io/badge/Visa-5B3765?style=flat&logo=visa&logoColor=white" alt="Visa">
+                    <img src="https://img.shields.io/badge/Mastercard-5B3765?style=flat&logo=mastercard&logoColor=white" alt="Mastercard">
+                    <img src="https://img.shields.io/badge/Pix-5B3765?style=flat&logo=pix&logoColor=white" alt="Pix">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- NOTIFICAÇÃO TOAST -->
+    <!-- ============================================ -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span id="toastMessage">Ação realizada!</span>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="../js/app.js"></script>
+</body>
+</html>
